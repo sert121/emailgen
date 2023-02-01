@@ -1,2 +1,2 @@
 # emailgen
-Email Generator built on GPT3
+Email Generator built on LLMs
