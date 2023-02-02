@@ -32,7 +32,8 @@ def open_ai_call(prompt,max_tokens=300):
         resp1 = response.json()
         try:
             generated_text = resp1['choices'][0]['text']
-        except:
+        except Exception as e:
+            st.error(f"{generated_text}, error: {e}")
             generated_text = "Sorry, we are unable to generate an email for you at the moment. You might have exceeded the number of trial API calls."
         return generated_text
 
